@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Add.css";
 import { assets } from "../../assets/assets";
 import axios from "axios";
@@ -29,9 +29,9 @@ const Add = ({ url }) => {
     formdata.append("category", data.category);
     formdata.append("image", image);
     const response = await axios.post(`${url}/api/food/add`, formdata);
-    console.log(e);
-    console.log(formdata);
-    console.log(response.data);
+    // console.log(e);
+    // console.log(formdata);
+    // console.log(response.data);
     if (response.data.success) {
       setData({
         name: "",
